@@ -53,15 +53,14 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
     // TODO RESPONSE: In the variable declarations below, why is it necessary to place
-    //  an 'f' after 4.3 but not after 1500 or 4?
+    //  an 'f' after 4.3 but not after 1500 or 4? - You need to indicate it is a float, default for a float is a double.
     public void simpleInterestReturnsCorrectAmount() {
         float principalAmount = 1500;
         float interestRateAsAPercent = 4.3f;
         float termOfInvestmentInYears = 4;
 
-        float actualInvestmentValue = calcSimpleInterest(principalAmount, interestRateAsAPercent, termOfInvestmentInYears);
+        float actualInvestmentValue = (principalAmount * (interestRateAsAPercent / 100) * termOfInvestmentInYears + principalAmount);
 
         assertEquals(1758f, actualInvestmentValue, ROUND_TO_NEAREST_PENNY);
     }
