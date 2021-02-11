@@ -24,12 +24,11 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
     public void numberOfWholeSlicesFromOnePizzaAndEightPeople() {
         int numberOfPeople = 4;
         int numberOfEightSlicePizzas = 2;
 
-        int actualSlicesPerPerson = divideUpEightSlicePizzasEvenly(numberOfEightSlicePizzas, numberOfPeople);
+        int actualSlicesPerPerson = (numberOfEightSlicePizzas * 8 / numberOfPeople);
 
         assertEquals(4, actualSlicesPerPerson);
     }
