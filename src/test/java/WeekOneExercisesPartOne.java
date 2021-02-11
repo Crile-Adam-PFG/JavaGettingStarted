@@ -18,7 +18,7 @@ public class WeekOneExercisesPartOne {
         int numberOfPeople = 8;
         int numberOfEightSlicePizzas = 1;
 
-        int actualSlicesPerPerson = (numberOfEightSlicePizzas * 8 /numberOfPeople);
+        int actualSlicesPerPerson = (numberOfEightSlicePizzas * 8 / numberOfPeople);
 
         assertEquals(1, actualSlicesPerPerson);
     }
