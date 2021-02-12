@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class WeekOneExercisesPartTwo {
     // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
-
     // TODO Response: Why would you never refactor if you had a failing test? - Because you don't know what is making it fail, nor will you know if refactoring gives you the same result.
 
     @Test
@@ -16,24 +15,56 @@ public class WeekOneExercisesPartTwo {
         int ouncesOfAlcoholConsumed = 3;
         float hoursSinceLastDrink = 2;
 
-        float actualBAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
+        float actualBAC = (float) (((5.14 / weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
 
         assertEquals(0.03, actualBAC, .001);
     }
 
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAFemale() {
         char gender = 'F';
         int weightInPounds = 135;
         int ouncesOfAlcoholConsumed = 5;
         float hoursSinceLastDrink = 1;
 
-        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+        float actualBAC = (float) (((5.14 / weightInPounds) * ouncesOfAlcoholConsumed * .66) - (hoursSinceLastDrink * .015));
 
         assertEquals(0.11, actualBAC, .001);
     }
 
+
+//    Tried to do If/Else Statement.....
+//    @Test
+//    public void bloodAlcoholLevelForAPerson() {
+//        char gender = 'F';
+//        int weightInPounds = 135;
+//        int ouncesOfAlcoholConsumed = 5;
+//        float hoursSinceLastDrink = 1;
+//
+//        if(gender == 'F') {
+//            float actualBAC = (float) ((5.14 / weightInPounds) * ouncesOfAlcoholConsumed * .73 - (hoursSinceLastDrink * .015));
+//        }
+//        else if(gender == 'M') {
+//            float actualBAC = (float) (((5.14 / weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
+//        }
+
+
+//Tried to do switch....
+//        @Test
+//        public void bloodAlcoholLevelForAPerson() {
+//        switch (gender) {
+//            case 'M':
+//                float actualBAC = (float) (((5.14 / weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
+//                break;
+//            case 'F':
+//                actualBAC = (float) (((5.14 / weightInPounds) * ouncesOfAlcoholConsumed * .66) - (hoursSinceLastDrink * .015));
+//                break;
+//            default:
+//                System.out.println("Invalid gender: " + gender);
+//                actualBAC = 0.0F;
+//                break;
+//
+//          }
     /**
      * Given your weight, gender, number of drinks, the amount of alcohol
      * by volume of the drinks consumed, and the amount of time since your last drink,
@@ -53,10 +84,11 @@ public class WeekOneExercisesPartTwo {
      * @param hoursSinceLastDrink
      * @return
      */
-
     private float calculateBAC(char gender, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
         // TODO RESPONSE: In the PluralSight video, you learned of three ways to make decisions based on the value
         //   in the gender variable. Implement this method using one way, and describe how the other ways could work.
+        // Other ways to do this would be to use a Switch or If/Else statement.  It would need to determine what the gender code is
+        // and then it could do the calculations based on what that result was.  I tried to make a new test for each but they didn't work.
         return 0.0f;
     }
 }
