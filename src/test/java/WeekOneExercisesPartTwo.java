@@ -7,17 +7,16 @@ public class WeekOneExercisesPartTwo {
     // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
 
-    // TODO Response: Why would you never refactor if you had a failing test?
+    // TODO Response: Why would you never refactor if you had a failing test? - Because you don't know what is making it fail, nor will you know if refactoring gives you the same result.
 
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAMale() {
         char gender = 'M';
         int weightInPounds = 185;
         int ouncesOfAlcoholConsumed = 3;
         float hoursSinceLastDrink = 2;
 
-        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+        float actualBAC = (float) (((5.14/weightInPounds) * ouncesOfAlcoholConsumed * .73) - (hoursSinceLastDrink * .015));
 
         assertEquals(0.03, actualBAC, .001);
     }
