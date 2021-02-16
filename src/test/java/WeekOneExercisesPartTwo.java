@@ -65,17 +65,18 @@ public class WeekOneExercisesPartTwo {
 //                break;
 //
 //          }
+
     /**
      * Given your weight, gender, number of drinks, the amount of alcohol
      * by volume of the drinks consumed, and the amount of time since your last drink,
      * calculate your Blood Alcohol Content (BAC).
-     *
+     * <p>
      * The weight quotient is 5.14 divided by the person's weight in pounds.
      * The alcohol distribution ratio is 0.73 for men and 0.66 for women.
      * The peak alcohol content is the product of the weight quotient, ounces of alcohol consumed, and the
      * alcohol distribution ratio.
      * The last consumption interval is the product of the hours since the last drink and 0.015.
-     *
+     * <p>
      * The Blood Alcohol Content is the difference between the peak alcohol content and the last consumption interval.
      *
      * @param gender
