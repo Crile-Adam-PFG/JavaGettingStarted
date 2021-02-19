@@ -34,7 +34,7 @@ public class WeekTwoExercisePartOne {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    // TODO Response: Why did we start with this test? - It was the easiest solution, no update needed
+    // TODO Response: Why did we start with this test? - It was the easiest solution.
     public void whenRollingAllGutterBallsScoreIsZero() {
         rollMany(20, 0);
 
@@ -44,8 +44,7 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
-    // TODO Response:  If the above test works with open frames, why is this test necessary?
+    // TODO Response:  If the above test works with open frames, why is this test necessary? - Assumes no pins before
     public void whenRollingOpenFrameScoreIsSumOfRolls() {
         rollMany(20, 1);
 
@@ -56,7 +55,6 @@ public class WeekTwoExercisePartOne {
 
     // TODO CODE: Start here
     @Test
-    @Disabled
     public void whenRollingSpareFrameScoreIsTenPlusNextRoll() {
         bowlingGame.roll(3);
         bowlingGame.roll(7);
@@ -69,7 +67,6 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
     public void whenRollingStrikeFrameScoreIsTenPlusNextTwoRolls() {
         bowlingGame.roll(10);
         bowlingGame.roll(7);
@@ -81,7 +78,7 @@ public class WeekTwoExercisePartOne {
         assertEquals(26, actual);
     }
 
-    //TODO Response: Why don't we need any more tests than these?
+    //TODO Response: Why don't we need any more tests than these? - We've tested all scenarios
 
     private void rollMany(int rollCount, int pins) {
         for(int i = 0; i < rollCount; i++) {
