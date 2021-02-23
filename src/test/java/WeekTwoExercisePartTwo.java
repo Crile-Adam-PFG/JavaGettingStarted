@@ -62,7 +62,7 @@ public class WeekTwoExercisePartTwo {
 
     @Test
     public void sendingAnyMultipleOfThreeShouldReturnStringFizz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: Added else to return Buzz for modulus of three.
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -76,7 +76,7 @@ public class WeekTwoExercisePartTwo {
 
     @Test
     public void sendingAnyMultipleOfFiveShouldReturnStringBuzz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: Added else to return Buzz for modulus of five.
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -89,7 +89,6 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingAnyMultipleOfThreeAndFiveOfThreeShouldReturnStringFizzBuzz() {
         // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
         // TODO: Implement the code to make this test pass
