@@ -21,7 +21,7 @@ public class WeekTwoExercisePartTwo {
 
     @Test
     public void sendingOneShouldReturnStringOne(){
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: Hard coded to return "1".
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
         FizzBuzz fb = new FizzBuzz();
@@ -33,9 +33,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingTwoShouldReturnStringTwo(){
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: replaced hard coded "1" with a toString() of the parameter
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -48,7 +47,6 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingThreeShouldReturnStringFizz() {
         // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
         // TODO: Implement the code to make this test pass
