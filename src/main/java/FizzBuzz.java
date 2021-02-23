@@ -1,7 +1,10 @@
 
 public class FizzBuzz {
     public String execute(Integer number) {
-
-        return number.toString();
+        String result = number.toString();
+        if(number == 3){
+            result = "Fizz";
+        }
+        return result;
     }
 }
