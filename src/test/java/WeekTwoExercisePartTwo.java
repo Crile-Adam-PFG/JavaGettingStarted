@@ -16,10 +16,10 @@ public class WeekTwoExercisePartTwo {
     // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
 
-    // TODO Response: Why would you never refactor if you had a failing test?
+    // TODO Response: Why would you never refactor if you had a failing test? -- Because you need to be able to refactor in a way to keep it passing,
+    //  which you couldn't do if it wasn't passing.
 
     @Test
-    @Disabled
     public void sendingOneShouldReturnStringOne(){
         // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
         // TODO: Implement the code to make this test pass

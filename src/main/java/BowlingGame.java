@@ -9,11 +9,12 @@ public class BowlingGame {
     }
 
     public int score() {
-        int score = 0;
         // TODO CODE: Change this to use a loop prior to implementing spare and strike calculation and then commit to git
         //            This change should not break the existing tests that pass. This is called refactoring.
 
         // TODO RESPONSE: Why does the subscript need to start with zero? - In Java arrays start with zero, not 1
+
+        int score = 0;
         int startOfNextFrameIndex = 0;
         for(int frame = 1; frame < 11 ; frame++) {
             //for strike

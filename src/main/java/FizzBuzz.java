@@ -1,6 +1,7 @@
 
 public class FizzBuzz {
     public String execute(Integer number) {
-        return null;
+        String i = "1";
+        return i;
     }
 }
