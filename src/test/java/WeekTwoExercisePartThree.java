@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
  * Implement each step in the simplest manner possible where all tests continue to pass.
  *
  * Make a Git commit after implementing each test. Add only the minimum amount of code required
- * for each test case to make that test pass. This may innclude just putting in a literal value...
+ * for each test case to make that test pass. This may include just putting in a literal value...
  * do not add any additional code.
  *
  * Hint:  If you complete implementing a test and the next test passes w/o any changes to the
@@ -28,11 +28,9 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class WeekTwoExercisePartThree {
     // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
-
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
     public void sendingAnActualFridayTheThirteenthReturnsTrue() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -107,6 +105,6 @@ public class WeekTwoExercisePartThree {
     }
 
     public boolean isUnluckyDate(int year, int month, int day) {
-        return false;
+        return true;
     }
 }
