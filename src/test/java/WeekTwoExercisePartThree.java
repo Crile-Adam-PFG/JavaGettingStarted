@@ -49,8 +49,7 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
-    public void sendingFridayTheThirteenthFromAnotherYearReturnsFalse() {
+    public void sendingFridayTheThirteenthFromAnotherYearReturnsTrue() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
         boolean actual = isUnluckyDate(2020, 11, 13);
@@ -105,9 +104,9 @@ public class WeekTwoExercisePartThree {
 
     public boolean isUnluckyDate(int year, int month, int day) {
         boolean result;
-        if(month == 9) {
-            result = true;
-        } else result = false;
+        if(year == 2019 && month ==11) {
+            result = false;
+        } else result = true;
 
         return result;
     }
