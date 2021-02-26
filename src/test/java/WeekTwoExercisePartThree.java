@@ -1,4 +1,5 @@
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.Disabled;
@@ -26,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
  */
 
 public class WeekTwoExercisePartThree {
+    public static final int JANUARY = 1;
+    public static final int DECEMBER = 12;
     // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
     // TODO Response: Why would you never refactor if you had a failing test?
@@ -58,10 +61,31 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
     public void sendingTwentySixteenReturnsOnlyOneFridayTheThirteenth() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
+        LocalDate[] actual = unluckyDatesByYear(2016);
+        LocalDate[] expected = new LocalDate[]{
+                LocalDate.of(2016, 5, 13),
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null};
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void sendingTwentyNinteenReturnsTwoFridayTheThirteenths() {
+        //  TODO: write this test and, if necessary, make any changes to make it pass
+        //  TODO: don't forget to commit after passing the test
         LocalDate[] actual = unluckyDatesByYear(2019);
         LocalDate[] expected = new LocalDate[]{
                 LocalDate.of(2019, 9, 13),
@@ -81,33 +105,53 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
-    public void sendingTwentyNinteenReturnsTwoFridayTheThirteenths() {
-        //  TODO: write this test and, if necessary, make any changes to make it pass
-        //  TODO: don't forget to commit after passing the test
-    }
-
-    @Test
-    @Disabled
     public void sendingTwentyFifteenReturnsThreeFridayTheThirteenths() {
         //  TODO: write this test and, if necessary, make any changes to make it pass
         //  TODO: don't forget to commit after passing the test
+        LocalDate[] actual = unluckyDatesByYear(2015);
+        LocalDate[] expected = new LocalDate[]{
+                LocalDate.of(2015, 2, 13),
+                LocalDate.of(2015, 3, 13),
+                LocalDate.of(2015, 11, 13),
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null};
+
+        assertArrayEquals(expected, actual);
     }
 
     // TODO Implementation Implement your changes to make the tests pass here...
 
     public LocalDate[] unluckyDatesByYear(int year) {
         LocalDate[] localDates = new LocalDate[12];
+        int index = 0;
+        for(int month = JANUARY; month <= DECEMBER; month++){
+            if(isUnluckyDate(year, month, 13)){
+                LocalDate unluckyDate = LocalDate.of(year, month, 13);
+                localDates[index++] = unluckyDate;
+            }
+        }
 
         return localDates;
     }
 
     public boolean isUnluckyDate(int year, int month, int day) {
-        boolean result;
-        if(year == 2019 && month ==11) {
-            result = false;
-        } else result = true;
+//        boolean result;
+//        if(year == 2019 && month ==11) {
+//            result = false;
+//        } else result = true;
+        if(day == 13) {
+            LocalDate dateInQuestion = LocalDate.of(year,month,day);
+            if(dateInQuestion.getDayOfWeek() == DayOfWeek.FRIDAY)
+                return true;
+        }
 
-        return result;
+        return false;
     }
 }
